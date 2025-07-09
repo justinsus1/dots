@@ -1,5 +1,24 @@
 .bar {
-  background: transparent;
+
+  .cent-box {
+    background: rgba(25, 25, 25, 0.75);
+    padding: 0;
+    font-family: JetbrainsMono;
+    border-radius: 15;
+  }
+
+  .work {
+    font-size: 20;
+  }
+
+  centerbox {
+    padding: 10;
+    background: transparent;
+  }
+
+  label {
+    // padding: 2;
+  }
 
   button {
     background: transparent;

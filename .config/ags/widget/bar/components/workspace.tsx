@@ -9,18 +9,17 @@ export default function Workspaces() {
     <box className="Workspaces">
       {bind(hypr, "workspaces").as((ws) =>
         ws
-          // .filter((ws) => !(ws.id >= -99 && ws.id <= -2)) // exclude special workspaces
           .sort((a, b) => a.id - b.id)
           .map((ws) => (
             <box>
-              {bind(hypr, "activeWorkspace").as((aws) => {
-                const isActive = aws?.id === ws.id;
+              {bind(hypr, "focused_workspace").as((aws) => {
+                const isActive = aws.id === ws.id;
                 return (
                   <button
-                    label={true ? "" : ""}
+                    label={isActive ? "●" : "○"}
                     onClicked={() => ws.focus()}
                   >
-                    {ws.id}
+                    {/* {ws.id} */}
                   </button>
                 );
               })}
